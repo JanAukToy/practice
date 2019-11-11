@@ -1,0 +1,32 @@
+
+const today = new Date();       //時間取得
+
+const seconds = today.getSeconds();         //2桁
+const mseconds = today.getMilliseconds();   //3桁
+
+const min = 1;      //ランダムナンバー最小値
+const max = 100;    //ランダムナンバー最大値
+
+const xnumber = Math.floor(Math.random() * (max + 1 - min)) + min;
+
+if (xnumber % 3 > 1) {
+  if (seconds % 3 > 1) {
+    if (mseconds % 3 > 1) {
+      console.log("大吉です");
+    } else {
+      console.log("小吉です");
+    };
+  } else {
+    console.log("凶です");
+  };
+} else {
+  if (seconds % 3 > 1) {
+    if (mseconds % 3 > 1) {
+      console.log("中吉です");
+    } else {
+      console.log("末吉です");
+    };
+  } else {
+    console.log("大凶です");
+  };
+};
